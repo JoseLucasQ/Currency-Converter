@@ -33,8 +33,8 @@ $(".btn").click(function () {
 
 $(document).ready(function($){
   $(".maskMoney").maskMoney({
-      decimal: ",",
-      thousands: "."
+      decimal: ".",
+      thousands: ","
   });
 
   $( "#btn" ).click(function() {
@@ -42,8 +42,6 @@ $(document).ready(function($){
     myHeaders.append("apikey", "Z6SQpGbV5laUVAl7xO0ljuzP9rTiChuv");
   
     var valor = document.getElementById("valor");
-  
-    console.log(valor)
   
     var coinFrom = document.getElementById("coinFrom").value;
     var coinTo = document.getElementById("coinTo").value;
@@ -77,3 +75,11 @@ $(document).ready(function($){
       .catch((error) => console.log("error", error));
   });
 })
+
+function empty() {
+  var x = document.getElementById("valor").value;
+  if (x == "") {
+      alert("Enter the Amount to be converted");
+      return false;
+  };
+}
