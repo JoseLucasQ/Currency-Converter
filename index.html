@@ -22,16 +22,16 @@
         </h1>
       
         <label for="moeda">From:</label><br>
-        <select name="coinFrom" id="coinFrom">
+        <select name="coinFrom" id="coinFrom" class="form-select-sm">
         </select><br><br>
         <label for="moeda">To:</label><br>
-        <select name="coinTo" id="coinTo">
+        <select name="coinTo" id="coinTo" class="form-select-sm">
         </select><br><br>
         
         <label for="moeda">Value:</label><br>
-        <input type="text" id="valor" value="0.01" class="maskMoney"/><br>
+        <input type="text" id="valor" value="0,00" placeholder="0,00" class="maskMoney"/><br>
 
-        <button type="submit" id="btn" class="btn btn-primary">Convert</button>
+        <button type="submit" id="btn" class="btn btn-primary" onClick="return empty()">Convert</button>
         <h2 id="valorConvertido"></h2>
       </div>
 </body>
